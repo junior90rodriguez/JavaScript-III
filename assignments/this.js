@@ -21,13 +21,15 @@ const myFunction = function () {
 
 // Principle 2
 
-const myNewFunction = function() {
-    console.log(this.name);
+const junior = {
+    name: 'Junior',
+    last: 'Rodriguez',
+    age: 28,
+    greet: function() {
+        return `Hello, my name is ${this.name} ${this.last} and I am ${this.age}`
+    }
 }
-
-const name = 'Alberto';
-console.log(myNewFunction());
-
+ console.log(junior.greet());
 //code example for Implicit Binding
 
 // Principle 3
