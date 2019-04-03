@@ -1,10 +1,10 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. Refers to the window object(Everything)
-* 2. Whatever is before the (.) is what (this) will be bound to
-* 3. 
-* 4. 
+* 1. Window Binding: Refers to the window object(Everything)
+* 2.Implicit Binding: Whatever is before the (.) is what (this) will be bound to
+* 3.New Binding: Made to build object literals
+* 4.Explicit Binding: using call or apply
 *
 * write out a code example of each explanation above
 */
@@ -34,7 +34,26 @@ const junior = {
 
 // Principle 3
 
-
+function Boxer(name, lbs, division) {
+    this.name = name;
+    this.lbs = lbs;
+    this.division = division;
+    this.class = function() {
+      console.log(`This boxer is a ${this.division} class fighter`);
+    }
+  }
+  
+  
+  
+  const canelo = new Boxer('Canelo', 164,'Middleweight');
+  const ggg = new Boxer('GGG', 159, 'Light Middleweight');
+  
+  console.log(canelo);
+  console.log(ggg);
+  
+  canelo.class();
+  ggg.class();
+  
 
 // code example for New Binding
 
